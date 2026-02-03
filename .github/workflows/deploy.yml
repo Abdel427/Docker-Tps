@@ -25,8 +25,8 @@ jobs:
         with:
           context: .
           push: true
-          # Tag dynamique avec votre username secret
-          tags: ${{ secrets.DOCKER_USERNAME }}/course-survey-app:latest
+          # Image poussée vers votre repo Docker Hub (ex. abdel67/cicdabdel:latest)
+          tags: ${{ secrets.DOCKER_USERNAME }}/cicdabdel:latest
 
   deploy:
     needs: build-and-push # Attendre la fin du build
